@@ -1,0 +1,17 @@
+The following CSS code snippet demonstrates a common issue: unexpected behavior due to specificity conflicts:
+
+```css
+#myElement {
+  color: blue;
+}
+
+.myClass {
+  color: red;
+}
+
+#myElement.myClass {
+  color: green; /* This rule is more specific and overrides the previous ones */
+}
+```
+
+In this scenario, an element with both the `id` `myElement` and the class `myClass` will have a green color.  However, unexpected results can arise when dealing with nested selectors, inheritance, and complex class structures.  Debugging these often requires a careful examination of CSS specificity rules.
